@@ -10,13 +10,13 @@
   </head>
   <body>
     <main>
-        <div><h1>Roomie Match</h1></div>
+        <div><h1 class="header-container">Roomie Match</h1></div>
         <p>description</p>
         <button type="button">Login</button>  
     </main>
     <div>
         <h2>Preferences</h2>
-        <div>
+        <div class="box">
             <h3>I keep my living area tidy</h3>
             <div class="likert-scale">
                 <label><input type="radio", name="clealiness", value="1"><span>Strongly agree</span></label>
@@ -26,13 +26,23 @@
                 <label><input type="radio", name="clealiness", value="5"><span>Strongly disagree</span></label>
             </div>
         </div>
-        <div>
+        <div class="box">
             <h3>Sleep time</h3>
             <div>
                 <label><input type="radio", name="sleep-time", value="1"><span>Early bird</span></label>
                 <label><input type="radio", name="sleep-time", value="2"><span>Night owl</span></label>
             </div>
         </div>
+        <div class="box">
+            <h3>Gender</h3>
+            <div>
+                <label><input type="radio", name="gender", value="1"><span>Male</span></label>
+                <label><input type="radio", name="gender", value="2"><span>Female</span></label>
+                <label><input type="radio", name="gender", value="2"><span>Non-binary</span></label>
+                <label><input type="radio", name="gender", value="2"><span>Other</span></label>
+            </div>
+        </div>
+        <button id="submit-btn">Submit</button>
     </div>
     <script src="index.js"></script>
   </body>
