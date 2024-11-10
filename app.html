@@ -12,10 +12,15 @@
     <main>
         <div><h1 class="header-container">roomiematch</h1></div>
         <p>Looking for the perfect roomie?</p>
-        <button id="get-started-btn">Get Started</button>
-        <button type="button">Login</button>  
+        <a href="#preferences">
+            <button id="get-started-btn">Get Started</button>
+        </a>
+        <a href="login.html">
+            <button type="button">Login</button>  
+        </a>
+        <img src="new_cityscape.png" alt="cityscape" width=100% height=100%>
     </main>
-    <div>
+    <div id="preferences">
         <h2>Preferences</h2>
         <div class="box">
             <h3>Gender</h3>
@@ -28,7 +33,7 @@
         </div>
         <div class="box">
             <h3>I keep my living area tidy</h3>
-            <div class="likert-scale">
+            <div>
                 <label><input type="radio", name="clealiness", value="strongly-agree"><span>Strongly agree</span></label>
                 <label><input type="radio", name="clealiness", value="somewhat-agree"><span>Somewhat agree</span></label>
                 <label><input type="radio", name="clealiness", value="neutral"><span>Neutral</span></label>
@@ -43,7 +48,9 @@
                 <label><input type="radio", name="sleep-time", value="night-owl"><span>Night owl</span></label>
             </div>
         </div>
-        <button id="submit-btn">Submit</button>
+        <a href="match-page.html">
+            <button id="submit-btn">Submit</button>
+        </a>
     </div>
   </body>
 </html>
