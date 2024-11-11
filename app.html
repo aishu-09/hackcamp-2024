@@ -26,32 +26,35 @@
         <div class="box">
             <h3>Gender</h3>
             <div>
-                <label><input type="radio", name="gender", value="male"><span>Male</span></label>
-                <label><input type="radio", name="gender", value="female"><span>Female</span></label>
-                <label><input type="radio", name="gender", value="non-binary"><span>Non-binary</span></label>
-                <label><input type="radio", name="gender", value="other"><span>Other</span></label>
+                <label><input type="radio" name="gender" value="male"><span>Male</span></label>
+                <label><input type="radio" name="gender" value="female"><span>Female</span></label>
+                <label><input type="radio" name="gender" value="non-binary"><span>Non-binary</span></label>
+                <label><input type="radio" name="gender" value="other"><span>Other</span></label>
             </div>
         </div>
         <div class="box">
             <h3>I keep my living area tidy</h3>
             <div>
-                <label><input type="radio", name="clealiness", value="strongly-agree"><span>Strongly agree</span></label>
-                <label><input type="radio", name="clealiness", value="somewhat-agree"><span>Somewhat agree</span></label>
-                <label><input type="radio", name="clealiness", value="neutral"><span>Neutral</span></label>
-                <label><input type="radio", name="clealiness", value="somewhat-disagree"><span>Somewhat disagree</span></label>
-                <label><input type="radio", name="clealiness", value="strongly-disagree"><span>Strongly disagree</span></label>
+                <label><input type="radio" name="clealiness" value="strongly-agree"><span>Strongly agree</span></label>
+                <label><input type="radio" name="clealiness" value="somewhat-agree"><span>Somewhat agree</span></label>
+                <label><input type="radio" name="clealiness" value="neutral"><span>Neutral</span></label>
+                <label><input type="radio" name="clealiness" value="somewhat-disagree"><span>Somewhat disagree</span></label>
+                <label><input type="radio" name="clealiness" value="strongly-disagree"><span>Strongly disagree</span></label>
             </div>
         </div>
         <div class="box">
             <h3>I am a...</h3>
             <div>
-                <label><input type="radio", name="sleep-time", value="early-bird"><span>Early bird</span></label>
-                <label><input type="radio", name="sleep-time", value="night-owl"><span>Night owl</span></label>
+                <label><input type="radio" name="sleep-time" value="early-bird"><span>Early bird</span></label>
+                <label><input type="radio" name="sleep-time" value="night-owl"><span>Night owl</span></label>
             </div>
         </div>
-        <a href="match-page.html">
-            <button id="submit-btn">Submit</button>
-        </a>
+        <!-- <a href="match-page.html">
+            <button onclick="addToArray()" id="submit-btn">Submit</button>
+        </a> -->
+        <button onclick="addToArray()" id="submit-btn">Submit</button>
+        <div id="result"></div>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>
