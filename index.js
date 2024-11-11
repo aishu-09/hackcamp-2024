@@ -9,37 +9,74 @@ function addToArray() {
     }
 }
 
-//u user eamples
-const user1  = ["Male", "Strongly agree", "Night Owl"];
-const user2 = ["Female", "Agree" , "Early bird"];
-const user3 = ["Male", "Strongly agree", "Night Owl"];
-const user4 = ["Male", "Strongly disagree", "Early bird"];
-const user5 = ["Female", "Neutral", "Night Owl"];
-const user6 = ["Female", "Neutral", "Early bird"];
+let users = [];
+let gender = "";
+let cleanliness = "";
+let sleepTime = "";
+let name = "";
 
-let myArray = [];
-
-function addToArray() {
+function addGender() {
     let selectedGender = document.querySelector('input[name="gender"]:checked');
     if (selectedGender) {
-        console.log("Selected gender:", selectedGender.value);
-        myArray.push(selectedGender.value);
-        console.log("Current array:", myArray);
-        updateResult();
-        selectedGender.checked = false;
-    } else {
-        console.log("No gender selected");
-        alert("Please select an option")
+        gender = selectedGender.value
     }
 }
 
-function updateResult() {
-    console.log("updateResult function called");
-    document.getElementById("result").innerHTML = "Array: " + myArray.join(", ");
+function addCleanliness() {
+    let selectedClean = document.querySelector('input[name="clealiness"]:checked');
+    if (selectedClean) {
+        cleanliness = selectedClean.value
+    }
+}
+
+function addSleepTime() {
+    let selectedSleepTime = document.querySelector('input[name="sleep-time"]:checked');
+    if (selectedSleepTime) {
+        sleepTime = selectedSleepTime.value
+    }
+}
+
+function addName() {
+    let selectedName = document.getElementById('name');
+    if (selectedName.value.trim() !== "") {
+        name = selectedName.value.trim();
+    }
+}
+
+function submitForm() {
+    addName();
+    addGender();
+    addCleanliness();
+    addSleepTime();
+
+    if (name && gender && cleanliness && sleepTime) {
+        let user = [name, gender, cleanliness, sleepTime];
+        users.push(user);
+        console.log("New user added:", user);
+        console.log("All users:", users);
+        
+        // Clear the form
+        document.getElementById('name').value = '';
+        document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+        
+        // Reset variables
+        name = gender = cleanliness = sleepTime = "";
+
+        // Optionally, update some UI element to show the user was added
+        document.getElementById('result').textContent = `User ${name} added successfully!`;
+    } else {
+        alert("Please fill in all fields");
+    }
 }
 
 
-
+//u user eamples
+// const user1  = ["Male", "Strongly agree", "Night Owl"];
+// const user2 = ["Female", "Agree" , "Early bird"];
+// const user3 = ["Male", "Strongly agree", "Night Owl"];
+// const user4 = ["Male", "Strongly disagree", "Early bird"];
+// const user5 = ["Female", "Neutral", "Night Owl"];
+// const user6 = ["Female", "Neutral", "Early bird"];
 
 // console.log(user7)
 // const userList = [user2, user3, user4, user5, user6]
