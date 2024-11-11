@@ -1,5 +1,5 @@
 * {
-    font-family: "Inter", sans-serif;
+    font-family: "Albert Sans", sans-serif;
 }
 
 body{
@@ -7,6 +7,7 @@ body{
     color: #741ed7;
     text-align: center;
     margin-bottom: 50px;
+    font-size: 25px;
     transition: background-color 0.5s ease; /* for colour transition */
 }
 
@@ -79,18 +80,75 @@ h2{
 .box{
     width: 100%;
     height: 100%;
-    background-color: rgb(235, 242, 235);
+    background-color: rgb(255, 255, 255);
     padding-bottom: 40px;
     padding-top: 7px;
     padding-left: 10px;
     padding-right: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px #741ed7;
     border-radius:30px;
-    color: rgb(10, 0, 13);
     font-size: 20px;
     margin-bottom:40px;
 }
 
 .login{
     align-items: center;
+}
+
+.box2{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 0 10px #741ed7;
+    color: black;
+    border-radius:30px;
+    font-size: 40px;
+    margin-bottom:40px;
+    display: flex;
+    align-items: center;
+    
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.pfp{
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 40px;
+    max-width: 100%;
+    height: auto;
+
+}
+.text-container{
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+.box-trait{
+    width: 220px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 0 10px #741ed7;
+    color: black;
+    border-radius:50px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.person{
+    text-align: center;
+}
+
+.trait{
+    margin-left: 35px;
 }
