@@ -73,47 +73,47 @@ function submitForm() {
 
 
 //u user eamples
-// const user1  = ["Male", "Strongly agree", "Night Owl"];
-// const user2 = ["Female", "Agree" , "Early bird"];
-// const user3 = ["Male", "Strongly agree", "Night Owl"];
-// const user4 = ["Male", "Strongly disagree", "Early bird"];
-// const user5 = ["Female", "Neutral", "Night Owl"];
-// const user6 = ["Female", "Neutral", "Early bird"];
+const user1  = ["Male", "Strongly agree", "Night Owl"];
+const user2 = ["Female", "Agree" , "Early bird"];
+const user3 = ["Male", "Strongly agree", "Night Owl"];
+const user4 = ["Male", "Strongly disagree", "Early bird"];
+const user5 = ["Female", "Neutral", "Night Owl"];
+const user6 = ["Female", "Neutral", "Early bird"];
 
-// console.log(user7)
-// const userList = [user2, user3, user4, user5, user6]
+console.log(user7)
+const userList = [user2, user3, user4, user5, user6]
 
 
-// function compareUsers(user1, usersArray) {
-//   // Initialize an array to store the matching user objects
-//   let matchingUsers = [];
+function compareUsers(user1, usersArray) {
+  // Initialize an array to store the matching user objects
+  let matchingUsers = [];
 
-//   // Iterate through the users array
-//   for (let i = 0; i < usersArray.length; i++) {
-//     const user = usersArray[i];
-//     let hasMatch = false;  // Track if there was any match
+  // Iterate through the users array
+  for (let i = 0; i < usersArray.length; i++) {
+    const user = usersArray[i];
+    let hasMatch = false;  // Track if there was any match
     
-//     // Compare each property of user1 with the current user
-//     for (let key1 in user1) {
-//       for (let key2 in user) {
-//         if (user1[key1] === user[key2]) {
-//           hasMatch = true;
-//           matchingUsers.push(user);
-//           break; // Exit once we find a match
-//         }
-//       }
-//       if (hasMatch) 
-//         break; // Exit the outer loop if a match is found
-//     }
-//   }
+    // Compare each property of user1 with the current user
+    for (let key1 in user1) {
+      for (let key2 in user) {
+        if (user1[key1] === user[key2]) {
+          hasMatch = true;
+          matchingUsers.push(user);
+          break; // Exit once we find a match
+        }
+      }
+      if (hasMatch) 
+        break; // Exit the outer loop if a match is found
+    }
+  }
   
-//   return matchingUsers;
-// }
+  return matchingUsers;
+}
 
-// const result = compareUsers(user1, userList);
+const result = compareUsers(user1, userList);
 
-// if (result.length > 0) {
-//   console.log("Matching users:", result);
-// } else {
-//   console.log("No match found.");
-// }
+if (result.length > 0) {
+  console.log("Matching users:", result);
+} else {
+  console.log("No match found.");
+}
