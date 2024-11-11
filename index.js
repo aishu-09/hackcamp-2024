@@ -67,6 +67,8 @@ function submitForm() {
     } else {
         alert("Please fill in all fields");
     }
+
+    window.location.href = 'match-page.html';
 }
 
 
